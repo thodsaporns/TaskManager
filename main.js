@@ -7,6 +7,8 @@ process.on('uncaughtException', (err) => {
 app.whenReady().then(() => {
   const win = new BrowserWindow({
     webPreferences: {
+      width: 640,
+      height: 360,
       nodeIntegration: true,
       contextIsolation: false,
     },
@@ -16,6 +18,5 @@ app.whenReady().then(() => {
     console.error('Failed to load renderer:', err);
   });
 
-  // Open DevTools so the renderer console is visible for debugging
-  win.webContents.openDevTools();
+  //win.webContents.openDevTools();
 });

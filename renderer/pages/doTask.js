@@ -3,7 +3,7 @@ export function DoTask(container, navigate) {
     <div class="page doTask">
       <h1>ทำงาน</h1>
 
-      <p>(Pomodoro coming soon)</p>
+      <p>รอใส่</p>
 
       <button id="home">กลับ</button>
     </div>
