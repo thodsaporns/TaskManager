@@ -6,9 +6,10 @@ process.on('uncaughtException', (err) => {
 
 app.whenReady().then(() => {
   const win = new BrowserWindow({
+    width: 640,
+    height: 360,
+    resizable: true,
     webPreferences: {
-      width: 640,
-      height: 360,
       nodeIntegration: true,
       contextIsolation: false,
     },

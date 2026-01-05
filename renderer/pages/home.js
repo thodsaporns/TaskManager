@@ -3,7 +3,8 @@ export function Home(container, navigate) {
     <div class="page home">
       <h1>Task Manager</h1>
 
-      <button primary" id="addTask">เพิ่มงาน</button>
+      <button class="addTask-btn" id="addTask">เพิ่มงาน</button>
+      <button class="pic-btn"></button>
       <button id="doTask">ทำงาน</button>
       <button id="viewTasks">ดูงานทั้งหมด</button>
     </div>

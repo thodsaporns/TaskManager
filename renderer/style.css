@@ -1,8 +1,92 @@
-/*.page.home{
-    min-height: 100vh;
+/* ให้ปุ่มไม่ทับbg+คำสั่งที่น่าจะมีประโยชน์เอาไว้ใช้กับอย่างอื่นได้  */
+/* สร้างปุ่มแล้วใส่รูปในนี้ได้(.class ของปุ่มนั้น แล้วใส่รูปเอา)  */
+
+.page.home{
     background-image: url('./assets/home_bg.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page.home{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.page.home h1{
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 2rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/* button ไม่ทับ bg(ตรง background 0.45) */
+.page.home button{
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    /*box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;*/
+    min-width: 180px;
+}
+/*
+.page.home button.addTask-btn{
+    background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.12);
+}
+*/
+/* ตอนเอา cursor ไปชี้ปุ่มขยับ */
+.page.home button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+
+.page.home.pic-btn{
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/addTask_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+/*ใส่รูปในปุ่ม+ปรับบลาๆ*/
+/*
+.page.home button.pic-btn{
+    background-image: url('./assets/addTask_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    min-height: 56px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background-color: transparent;
 }*/
